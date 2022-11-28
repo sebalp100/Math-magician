@@ -106,7 +106,7 @@ Clone this repository to your desired folder:
 
 
 - cd my-folder
-- git clone https://github.com/sebalp100/Math-magicians
+- git clone https://github.com/sebalp100/Math-magician
 
 
 ### Install
