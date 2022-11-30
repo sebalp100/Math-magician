@@ -12,7 +12,7 @@
 
 .main-container {
   display: flex;
-  width: 500px;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -21,15 +21,23 @@ table {
   border-collapse: collapse;
 }
 
-input {
+::-webkit-scrollbar {
+  display: none;
+}
+
+.output {
   width: 100%;
   background-color: darkgray;
-  text-align: right;
   border: none;
+  text-align: right;
   outline-style: none;
   height: 40px;
   font-size: 20px;
   color: white;
+  max-width: 320px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .input {
@@ -42,6 +50,7 @@ button {
   height: 40px;
   border-radius: 0;
   border: 0.5px solid gray;
+  cursor: pointer;
 }
 
 .zero {
