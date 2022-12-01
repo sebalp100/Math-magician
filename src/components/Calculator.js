@@ -1,81 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: '0',
-      next: null,
-      operation: null,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+const Calculator = () => {
+  const [state, changeState] = useState({
+    total: '0',
+    next: null,
+    operation: null,
+  });
 
-  handleClick = (event) => {
-    const values = calculate(this.state, event.target.innerText);
-    this.setState(values);
+  const HandleClick = (event) => {
+    const values = calculate(state, event.target.innerText);
+    changeState(values);
   };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div className="main-container">
-        <table cellSpacing="0">
-          <tbody>
-            <tr>
-              <td>
-                <div className="output">
-                  <div className="input">
-                    {`${total || ''} ${operation || ''} ${next || ''}`}
-                  </div>
+  const { total, next, operation } = state;
+
+  return (
+    <div className="main-container">
+      <table cellSpacing="0">
+        <tbody>
+          <tr>
+            <td>
+              <div className="output">
+                <div className="input">
+                  {`${total || ''} ${operation || ''} ${next || ''}`}
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onClick={this.handleClick} type="submit">AC</button>
-                <button onClick={this.handleClick} type="submit">+/-</button>
-                <button onClick={this.handleClick} type="submit">%</button>
-                <button onClick={this.handleClick} className="orange" type="submit">÷</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onClick={this.handleClick} type="submit">7</button>
-                <button onClick={this.handleClick} type="submit">8</button>
-                <button onClick={this.handleClick} type="submit">9</button>
-                <button onClick={this.handleClick} className="orange" type="submit">x</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onClick={this.handleClick} type="submit">4</button>
-                <button onClick={this.handleClick} type="submit">5</button>
-                <button onClick={this.handleClick} type="submit">6</button>
-                <button onClick={this.handleClick} className="orange" type="submit">-</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onClick={this.handleClick} type="submit">1</button>
-                <button onClick={this.handleClick} type="submit">2</button>
-                <button onClick={this.handleClick} type="submit">3</button>
-                <button onClick={this.handleClick} className="orange" type="submit">+</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onClick={this.handleClick} className="zero" type="submit">0</button>
-                <button onClick={this.handleClick} type="submit">.</button>
-                <button onClick={this.handleClick} className="orange" type="submit">=</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={(e) => HandleClick(e)} type="submit">AC</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">+/-</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">%</button>
+              <button onClick={(e) => HandleClick(e)} className="orange" type="submit">÷</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={(e) => HandleClick(e)} type="submit">7</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">8</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">9</button>
+              <button onClick={(e) => HandleClick(e)} className="orange" type="submit">x</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={(e) => HandleClick(e)} type="submit">4</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">5</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">6</button>
+              <button onClick={(e) => HandleClick(e)} className="orange" type="submit">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={(e) => HandleClick(e)} type="submit">1</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">2</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">3</button>
+              <button onClick={(e) => HandleClick(e)} className="orange" type="submit">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={(e) => HandleClick(e)} className="zero" type="submit">0</button>
+              <button onClick={(e) => HandleClick(e)} type="submit">.</button>
+              <button onClick={(e) => HandleClick(e)} className="orange" type="submit">=</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default Calculator;
