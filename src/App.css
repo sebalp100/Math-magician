@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: rgb(44, 44, 44);
+  color: azure;
+  font-family: 'Poppins', sans-serif;
 }
 
 .calc-wrapper {
@@ -59,4 +67,63 @@ button {
 
 .orange {
   background-color: rgb(241, 142, 106);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+.link {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-right: 4%;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+  gap: 40px;
+}
+
+.calc-container,
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+  align-items: center;
+}
+
+.quoteContainer {
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .link {
+    gap: 100px;
+  }
+
+  .calc-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50vh;
+    border: 2px solid white;
+    background-color: dimgray;
+  }
 }
