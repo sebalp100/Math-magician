@@ -79,6 +79,7 @@ alt="logo" width="140"  height="auto" />
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+You can find a live version of the project here: https://math-magician-react-app.onrender.com/
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
