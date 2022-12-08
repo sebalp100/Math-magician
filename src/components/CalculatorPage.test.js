@@ -1,9 +1,8 @@
 import * as React from 'react';
-// import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import CalculatorPage from './CalculatorPage';
 
-test('First Snapshot test', () => {
+test('Firstt Snapshot test', () => {
   const component = renderer
     .create(<CalculatorPage />)
     .toJSON();

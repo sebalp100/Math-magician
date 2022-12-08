@@ -13,7 +13,7 @@ const funct2 = operate(one, two, operat2);
 const funct3 = operate(one, two, operat3);
 const funct4 = operate(one, two, operat4);
 
-test('plus sign', () => {
+test('pluss sign', () => {
   expect(funct).toBe('30');
 });
 
