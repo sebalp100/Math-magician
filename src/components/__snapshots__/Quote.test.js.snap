@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`First Snapshot test 1`] = `
+<div
+  className="quoteContainer"
+>
+  <p>
+    Pure mathematics is, in its way, the poetry of logical ideas.
+    <br />
+    Albert Einstein
+  </p>
+</div>
+`;
