@@ -5,7 +5,6 @@ import App from './App';
 import Quote from './components/Quote';
 import CalculatorPage from './components/CalculatorPage';
 
-
 describe('App', () => {
   it('renders home component', () => {
     render(<App />);
