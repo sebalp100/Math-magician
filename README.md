@@ -35,7 +35,7 @@ alt="logo" width="140"  height="auto" />
 
 # 📖 Math Magicians <a name="about-project"></a>
 
-> In this project, we are setting up a test app using basic React commands.
+> In this project, we are setting up a simple website made with React that allows the user to use a calculator to perform basic math functions.
 
 
 ## 🛠 Built With <a name="built-with"></a>
